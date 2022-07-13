@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  img{
+      border-radius: 50%;
+      margin-left: 600px;
+      
+  }
+</style>
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <a href="/ " class="btn btn-outline-primary my-1 mx-2">Go Back To Home </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                      
+                      
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                       <!-- <input class="form-control mr-sm-2" type="login" placeholder="login" aria-label="login">-->
+                       
+       <!--<input class="form-control mr-sm-2" type="Register" placeholder="Register" aria-label="Register">-->
+   
+                         <!--<input class="form-control mr-sm-2" type="register" placeholder="register" aria-label="register">-->
+                        
+                      </form>
+                      <form class="form-inline my-2 my-lg-0">
+                    </div>
+                  </nav>
+                  <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t39.30808-6/272274356_146791817732289_4949843533722317882_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=9-lYJOX8lH8AX9MJksc&_nc_ht=scontent-nrt1-1.xx&oh=00_AT_A16T5XTjwFHYdrTo2S45XDHEWv-2bVRiP49LpHMI1jQ&oe=62D24A48" width="150px" alt="" >
+<div class="container">
+    <h1 class="text-center my-3 display-2">
+        <b>Contact Us</b>
+    </h1>
+<form action="/contact" method="post">
+{% csrf_token %}
+    <div class="mb-3 py-2">
+  <label for="exampleFormControlInput1" class="form-label"><b>Name</b></label>
+  <input type="name" class="form-control" id="exampleFormControlInput1" name = "name" placeholder="Enter your Name">
+</div>
+        <div class="mb-3 py-2">
+            <label for="exampleFormControlInput1" class="form-label"><b>Email id</b></label>
+  <input type="email" class="form-control" id="exampleFormControlInpu2"name = "email" placeholder="Enter your Email">
+</div>
+        <div class="mb-3 py-2">
+            <label for="exampleFormControlInput1" class="form-label"><b>Phone number</b></label>
+  <input type="number" class="form-control" id="exampleFormControlInput3"  name = "phone" placeholder="Enter your Phone number">
+</div>
+<div class="mb-3 py-2">
+    <label for="exampleFormControlTextarea1" class="form-label"><b>How can we help you ??</b></label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name = "desc"></textarea>
+</div>
+
+     <button type="submit" class="btn btn-primary btn-lg ">Submit</button>
+        </form>
+</div>
+
+
+
+{% endblock content%}
